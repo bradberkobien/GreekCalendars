@@ -13,7 +13,7 @@ namespace GreekCalendars.DAL
         {
             var events = new List<Event>
             {
-                new Event{EventName="Volleyball",EventStartDateTime=DateTime.Parse("2016-09-01")},
+                new Event{EventName="Volleyball",Summary="Hit the ball with your arms and stuff",EventStartDateTime=DateTime.Parse("2016-09-01")},
                 new Event{EventName="Basketball",EventStartDateTime=DateTime.Parse("2016-09-01")}
             };
 

@@ -9,6 +9,7 @@ namespace GreekCalendars.Models
     {
         public int EventID { get; set; }
         public string EventName { get; set; }
+        public string Summary { get; set; }
         public DateTime EventStartDateTime { get; set; }
     }
 }
