@@ -23,7 +23,7 @@ namespace GreekCalendars.Controllers
                     // delegate sending to another controller action
                     return (ViewCalendar());
                 case "Compare":
-                    // call another action to perform the cancellation
+                    // call another action 
                     return (CompareCalendar());
                 default:
                     // If they've submitted the form without a submitButton, 
@@ -35,8 +35,24 @@ namespace GreekCalendars.Controllers
         [HttpPost]
         public ActionResult ViewCalendar()
         {
+            //fraternities
+            string betaThetaPi = this.Request.Form["betaThetaPi"];
+            string deltaChi = this.Request.Form["deltaChi"];
+            string deltaTauDelta = this.Request.Form["deltaTauDelta"];
+            string lambdaChiAlpha = this.Request.Form["lambdaChiAlpha"];
+            string phiDeltaTheta = this.Request.Form["phiDeltaTheta"];
+            string phiGammaDelta = this.Request.Form["phiGammaDelta"];
+            string piKappaAlpha = this.Request.Form["piKappaAlpha"];
             string sigmaAlphaEpsilon = this.Request.Form["sigmaAlphaEpsilon"];
-            if(sigmaAlphaEpsilon == "on")
+            string sigmaChi = this.Request.Form["sigmaChi"];
+            string sigmaNu = this.Request.Form["sigmaNu"];
+            string thetaXi = this.Request.Form["thetaXi"];
+
+            //sororities
+            string alphaPhi = this.Request.Form["alphaPhi"];
+            string alphaSigmaAlpha = this.Request.Form["alphaSigmaAlpha"];
+
+            if (sigmaAlphaEpsilon == "on")
             {
                 return View("SigmaAlphaEpsilonCalendar");
             }
@@ -47,7 +63,23 @@ namespace GreekCalendars.Controllers
         [HttpPost]
         public ActionResult CompareCalendar()
         {
+            //fraternities
+            string betaThetaPi = this.Request.Form["betaThetaPi"];
+            string deltaChi = this.Request.Form["deltaChi"];
+            string deltaTauDelta = this.Request.Form["deltaTauDelta"];
+            string lambdaChiAlpha = this.Request.Form["lambdaChiAlpha"];
+            string phiDeltaTheta = this.Request.Form["phiDeltaTheta"];
+            string phiGammaDelta = this.Request.Form["phiGammaDelta"];
+            string piKappaAlpha = this.Request.Form["piKappaAlpha"];
             string sigmaAlphaEpsilon = this.Request.Form["sigmaAlphaEpsilon"];
+            string sigmaChi = this.Request.Form["sigmaChi"];
+            string sigmaNu = this.Request.Form["sigmaNu"];
+            string thetaXi = this.Request.Form["thetaXi"];
+
+            //sororities
+            string alphaPhi = this.Request.Form["alphaPhi"];
+            string alphaSigmaAlpha = this.Request.Form["alphaSigmaAlpha"];
+
             if (sigmaAlphaEpsilon == "on")
             {
                 return View("SigmaAlphaEpsilonCalendar");

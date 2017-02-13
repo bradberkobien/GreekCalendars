@@ -8,24 +8,24 @@
 
 <br />
 
-<form id="form" method="post" action="Rush/CheckSubmit">
+<form id="form" method="post" action="CheckSubmit">
     <div class="row">
         <div class="col-md-offset-1 col-md-3">
             <span class="button-checkbox">
                 <button type="button" class="btn" data-color="primary">Beta Theta Pi</button>
-                <input type="checkbox" name="betaThetaPi" value="0" class="hidden" />
+                <input type="checkbox" name="betaThetaPi" id="betaThetaPi" value="0" class="hidden" />
             </span>
         </div>
         <div class="col-md-offset-1 col-md-3">
             <span class="button-checkbox">
                 <button type="button" class="btn" data-color="primary">Delta Chi</button>
-                <input type="checkbox" name="deltaChi" value="1" class="hidden" />
+                <input type="checkbox" name="deltaChi" id="deltaChi" value="1" class="hidden" />
             </span>
         </div>
         <div class="col-md-offset-1 col-md-3">
             <span class="button-checkbox">
                 <button type="button" class="btn" data-color="primary">Delta Tau Delta</button>
-                <input type="checkbox" name="deltaTauDelta" value="2" class="hidden" />
+                <input type="checkbox" name="deltaTauDelta" id="deltaTauDelta" value="2" class="hidden" />
             </span>
         </div>
     </div>
@@ -36,19 +36,19 @@
         <div class="col-md-offset-1 col-md-3">
             <span class="button-checkbox">
                 <button type="button" class="btn" data-color="primary">Lambda Chi Alpha</button>
-                <input type="checkbox" name="lambdaChiAlpha" class="hidden" />
+                <input type="checkbox" name="lambdaChiAlpha" id="lambdaChiAlpha"class="hidden" />
             </span>
         </div>
         <div class="col-md-offset-1 col-md-3">
             <span class="button-checkbox">
                 <button type="button" class="btn" data-color="primary">Phi Delta Theta</button>
-                <input type="checkbox" name="phiDeltaTheta" class="hidden" />
+                <input type="checkbox" name="phiDeltaTheta" id="phiDeltaTheta" class="hidden" />
             </span>
         </div>
         <div class="col-md-offset-1 col-md-3">
             <span class="button-checkbox">
                 <button type="button" class="btn" data-color="primary">Phi Gamma Delta</button>
-                <input type="checkbox" name="phiGammaDelta" class="hidden" />
+                <input type="checkbox" name="phiGammaDelta" id="phiGammaDelta" class="hidden" />
             </span>
         </div>
     </div>
@@ -59,7 +59,7 @@
         <div class="col-md-offset-1 col-md-3">
             <span class="button-checkbox">
                 <button type="button" class="btn" data-color="primary">Pi Kappa Alpha</button>
-                <input type="checkbox" name="piKappaAlpha" class="hidden" />
+                <input type="checkbox" name="piKappaAlpha" id="piKappaAlpha"class="hidden" />
             </span>
         </div>
         <div class="col-md-offset-1 col-md-3">
@@ -71,7 +71,7 @@
         <div class="col-md-offset-1 col-md-3">
             <span class="button-checkbox">
                 <button type="button" class="btn" data-color="primary">Sigma Chi</button>
-                <input type="checkbox" name="sigmaChi" class="hidden" />
+                <input type="checkbox" name="sigmaChi" id="sigmaChi" class="hidden" />
             </span>
         </div>
     </div>
@@ -82,13 +82,13 @@
         <div class="col-md-offset-2 col-md-4">
             <span class="button-checkbox">
                 <button type="button" class="btn" data-color="primary">Sigma Nu</button>
-                <input type="checkbox" name="sigmaNu" class="hidden" />
+                <input type="checkbox" name="sigmaNu" id="sigmaNu" class="hidden" />
             </span>
         </div>
         <div class="col-md-offset-2 col-md-4">
             <span class="button-checkbox">
                 <button type="button" class="btn" data-color="primary">Theta Xi</button>
-                <input type="checkbox" name="thetaXi" class="hidden" />
+                <input type="checkbox" name="thetaXi" id="thetaXi" class="hidden" />
             </span>
         </div>
     </div>
@@ -106,13 +106,13 @@
         <div class="col-md-offset-2 col-md-4">
             <span class="button-checkbox">
                 <button type="button" class="btn" data-color="primary">Alpha Phi</button>
-                <input name="alphaPhi" type="checkbox" class="hidden" />
+                <input name="alphaPhi" id="alphaPhi" type="checkbox" class="hidden" />
             </span>
         </div>
         <div class="col-md-offset-2 col-md-4">
             <span class="button-checkbox">
                 <button type="button" class="btn" data-color="primary">Alpha Sigma Alpha</button>
-                <input name="alphaSigmaAlpha" type="checkbox" class="hidden" />
+                <input name="alphaSigmaAlpha" id="alphaSigmaAlpha" type="checkbox" class="hidden" />
             </span>
         </div>
     </div>
@@ -121,10 +121,10 @@
 
     <div class="row">
         <div class="col-md-offset-4 col-md-2">
-            <button type="submit" name="submitButton" value="View" class="btn btn-xlarge btn-success" onclick="window.location.href = '@Url.Action("CheckSubmit", "Rush")'">View</button>
+            <button type="submit" name="submitButton" value="View" title="View one organization's greek calendar" class="btn btn-xlarge btn-success" onclick="return viewClickVerify()">View</button>
         </div>
         <div class="col-md-2">
-            <button type="submit" name="submitButton" value="Compare" class="btn btn-xlarge btn-info" onclick="window.location.href = '@Url.Action("CheckSubmit", "Rush")'">Compare</button>
+            <button type="submit" name="submitButton" value="Compare" title="Compare two organization's greek calendars" class="btn btn-xlarge btn-info" onclick="return compareClickVerify()">Compare</button>
         </div>
     </div>
 </form>
@@ -132,4 +132,5 @@
 @section Scripts
 {
     <script src="@Url.Content("~/Scripts/button-checkbox.js")"></script>
+    <script src="@Url.Content("~/Scripts/greekcalendars-checkbox-verification.js")"></script>
 }
