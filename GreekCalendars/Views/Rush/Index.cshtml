@@ -1,10 +1,6 @@
 ﻿@{
     ViewBag.Title = "Rush Page";
 }
-@section Scripts
-{
-    <script src="@Url.Content("~/Scripts/button-checkbox.js")"></script>
-}
 
 <div>
     <center><h2>Fraternities</h2></center>
@@ -12,119 +8,128 @@
 
 <br />
 
-<div class="row">
-    <div class="col-md-offset-1 col-md-3">
-        <span class="button-checkbox">
-            <button type="button" class="btn" data-color="primary">Beta Theta Pi</button>
-            <input type="checkbox" class="hidden" />
-        </span>
+<form id="form" method="post" action="Rush/CheckSubmit">
+    <div class="row">
+        <div class="col-md-offset-1 col-md-3">
+            <span class="button-checkbox">
+                <button type="button" class="btn" data-color="primary">Beta Theta Pi</button>
+                <input type="checkbox" name="betaThetaPi" value="0" class="hidden" />
+            </span>
+        </div>
+        <div class="col-md-offset-1 col-md-3">
+            <span class="button-checkbox">
+                <button type="button" class="btn" data-color="primary">Delta Chi</button>
+                <input type="checkbox" name="deltaChi" value="1" class="hidden" />
+            </span>
+        </div>
+        <div class="col-md-offset-1 col-md-3">
+            <span class="button-checkbox">
+                <button type="button" class="btn" data-color="primary">Delta Tau Delta</button>
+                <input type="checkbox" name="deltaTauDelta" value="2" class="hidden" />
+            </span>
+        </div>
     </div>
-    <div class="col-md-offset-1 col-md-3">
-        <span class="button-checkbox">
-            <button type="button" class="btn" data-color="primary">Delta Chi</button>
-            <input type="checkbox" class="hidden" />
-        </span>
-    </div>
-    <div class="col-md-offset-1 col-md-3">
-        <span class="button-checkbox">
-            <button type="button" class="btn" data-color="primary">Delta Tau Delta</button>
-            <input type="checkbox" class="hidden" />
-        </span>
-    </div>
-</div>
 
-<br/>
+    <br />
 
-<div class="row">
-    <div class="col-md-offset-1 col-md-3">
-        <span class="button-checkbox">
-            <button type="button" class="btn" data-color="primary">Lambda Chi Alpha</button>
-            <input type="checkbox" class="hidden" />
-        </span>
+    <div class="row">
+        <div class="col-md-offset-1 col-md-3">
+            <span class="button-checkbox">
+                <button type="button" class="btn" data-color="primary">Lambda Chi Alpha</button>
+                <input type="checkbox" name="lambdaChiAlpha" class="hidden" />
+            </span>
+        </div>
+        <div class="col-md-offset-1 col-md-3">
+            <span class="button-checkbox">
+                <button type="button" class="btn" data-color="primary">Phi Delta Theta</button>
+                <input type="checkbox" name="phiDeltaTheta" class="hidden" />
+            </span>
+        </div>
+        <div class="col-md-offset-1 col-md-3">
+            <span class="button-checkbox">
+                <button type="button" class="btn" data-color="primary">Phi Gamma Delta</button>
+                <input type="checkbox" name="phiGammaDelta" class="hidden" />
+            </span>
+        </div>
     </div>
-    <div class="col-md-offset-1 col-md-3">
-        <span class="button-checkbox">
-            <button type="button" class="btn" data-color="primary">Phi Delta Theta</button>
-            <input type="checkbox" class="hidden" />
-        </span>
-    </div>
-    <div class="col-md-offset-1 col-md-3">
-        <span class="button-checkbox">
-            <button type="button" class="btn" data-color="primary">Phi Gamma Delta</button>
-            <input type="checkbox" class="hidden" />
-        </span>
-    </div>
-</div>
 
-<br/>
+    <br />
 
-<div class="row">
-    <div class="col-md-offset-1 col-md-3">
-        <span class="button-checkbox">
-            <button type="button" class="btn" data-color="primary">Pi Kappa Alpha</button>
-            <input type="checkbox" class="hidden" />
-        </span>
+    <div class="row">
+        <div class="col-md-offset-1 col-md-3">
+            <span class="button-checkbox">
+                <button type="button" class="btn" data-color="primary">Pi Kappa Alpha</button>
+                <input type="checkbox" name="piKappaAlpha" class="hidden" />
+            </span>
+        </div>
+        <div class="col-md-offset-1 col-md-3">
+            <span class="button-checkbox">
+                <button type="button" class="btn" data-color="primary">Sigma Alpha Epsilon</button>
+                <input name="sigmaAlphaEpsilon" id="sigmaAlphaEpsilon" type="checkbox" class="hidden" />
+            </span>
+        </div>
+        <div class="col-md-offset-1 col-md-3">
+            <span class="button-checkbox">
+                <button type="button" class="btn" data-color="primary">Sigma Chi</button>
+                <input type="checkbox" name="sigmaChi" class="hidden" />
+            </span>
+        </div>
     </div>
-    <div class="col-md-offset-1 col-md-3">
-        <span class="button-checkbox">
-            <button type="button" class="btn" data-color="primary">Sigma Alpha Epsilon</button>
-            <input type="checkbox" class="hidden" />
-        </span>
-    </div>
-    <div class="col-md-offset-1 col-md-3">
-        <span class="button-checkbox">
-            <button type="button" class="btn" data-color="primary">Sigma Chi</button>
-            <input type="checkbox" class="hidden" />
-        </span>
-    </div>
-</div>
 
-<br />
+    <br />
 
-<div class="row">
-    <div class="col-md-offset-2 col-md-4">
-        <span class="button-checkbox">
-            <button type="button" class="btn" data-color="primary">Sigma Nu</button>
-            <input type="checkbox" class="hidden" />
-        </span>
+    <div class="row">
+        <div class="col-md-offset-2 col-md-4">
+            <span class="button-checkbox">
+                <button type="button" class="btn" data-color="primary">Sigma Nu</button>
+                <input type="checkbox" name="sigmaNu" class="hidden" />
+            </span>
+        </div>
+        <div class="col-md-offset-2 col-md-4">
+            <span class="button-checkbox">
+                <button type="button" class="btn" data-color="primary">Theta Xi</button>
+                <input type="checkbox" name="thetaXi" class="hidden" />
+            </span>
+        </div>
     </div>
-    <div class="col-md-offset-2 col-md-4">
-        <span class="button-checkbox">
-            <button type="button" class="btn" data-color="primary">Theta Xi</button>
-            <input type="checkbox" class="hidden" />
-        </span>
-    </div>
-</div>
 
-<div class="row">
-    <div class="col-md-offset-4 col-md-2">
-        <button type="button" class="btn btn-xlarge btn-success" onclick="window.location.href = '@Url.Action("Index", "Compare")'">View</button>
-    </div>
-    <div class="col-md-2">
-            <button type="button" class="btn btn-xlarge btn-info" onclick="window.location.href = '@Url.Action("Index", "Compare")'" >Compare</button>
-    </div>
-</div>
+    <hr class="large-bottom" />
+    <br />
 
-<hr>
-<br />
-
-<div>
-    <center><h2>Sororities</h2></center>
-</div>
-
-<br />
-
-<div class="row">
-    <div class="col-md-offset-2 col-md-4">
-        <span class="button-checkbox">
-            <button type="button" class="btn" data-color="primary">Alpha Phi</button>
-            <input type="checkbox" class="hidden" />
-        </span>
+    <div>
+        <center><h2>Sororities</h2></center>
     </div>
-    <div class="col-md-offset-2 col-md-4">
-        <span class="button-checkbox">
-            <button type="button" class="btn" data-color="primary">Alpha Sigma Alpha</button>
-            <input type="checkbox" class="hidden" />
-        </span>
+
+    <br />
+
+    <div class="row">
+        <div class="col-md-offset-2 col-md-4">
+            <span class="button-checkbox">
+                <button type="button" class="btn" data-color="primary">Alpha Phi</button>
+                <input name="alphaPhi" type="checkbox" class="hidden" />
+            </span>
+        </div>
+        <div class="col-md-offset-2 col-md-4">
+            <span class="button-checkbox">
+                <button type="button" class="btn" data-color="primary">Alpha Sigma Alpha</button>
+                <input name="alphaSigmaAlpha" type="checkbox" class="hidden" />
+            </span>
+        </div>
     </div>
-</div>
+
+    <hr class="large-bottom">
+
+    <div class="row">
+        <div class="col-md-offset-4 col-md-2">
+            <button type="submit" name="submitButton" value="View" class="btn btn-xlarge btn-success" onclick="window.location.href = '@Url.Action("CheckSubmit", "Rush")'">View</button>
+        </div>
+        <div class="col-md-2">
+            <button type="submit" name="submitButton" value="Compare" class="btn btn-xlarge btn-info" onclick="window.location.href = '@Url.Action("CheckSubmit", "Rush")'">Compare</button>
+        </div>
+    </div>
+</form>
+
+@section Scripts
+{
+    <script src="@Url.Content("~/Scripts/button-checkbox.js")"></script>
+}

@@ -28,3 +28,6 @@ body {
   margin: -100px 0 0 -150px;
 }
 
+hr.large-bottom {
+    padding: 15px 50px 50px 15px;
+}
