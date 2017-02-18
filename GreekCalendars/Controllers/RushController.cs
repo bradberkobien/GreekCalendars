@@ -28,7 +28,7 @@ namespace GreekCalendars.Controllers
                 default:
                     // If they've submitted the form without a submitButton, 
                     // just return the view again.
-                    return ();
+                    return (View());
             }
         }
 
