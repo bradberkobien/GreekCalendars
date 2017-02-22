@@ -15,7 +15,14 @@
 
 function compareClickVerify() {
     var total = $('input:checked').length;
-    if (total != 2) {
+    if (total == 1)
+    {
+        alert("You must select two organizations to compare at a time");
+        document.getElementById('form').onsubmit = function () {
+            return false;
+        };
+    }
+    else if (total > 2) {
         alert("You may only select two organizations to compare at a time");
         document.getElementById('form').onsubmit = function () {
             return false;
