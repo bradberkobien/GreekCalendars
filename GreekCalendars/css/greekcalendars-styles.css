@@ -13,7 +13,7 @@ body {
 }
 
 #footer {
-    position: absolute;
+    position: relative;
     bottom: 0;
     width: 75%;
 }
@@ -28,6 +28,24 @@ body {
   margin: -100px 0 0 -150px;
 }
 
+h2 {
+    text-align: center;
+}
+
+.iframe {
+    display: block;
+    text-align: center;
+}
+
+.box {
+    border: 3px dashed lightblue;
+    padding: 10px;
+    padding-bottom: 50px;
+}
+
+.gap {
+    margin: 40px;
+}
 hr.large-bottom {
     padding: 15px 50px 50px 15px;
 }

@@ -820,7 +820,7 @@ pre code {
 .col-xs-10,
 .col-xs-11,
 .col-xs-12,
-.col-sm-1,
+.col-sm-offset-1,
 .col-sm-2,
 .col-sm-3,
 .col-sm-4,
@@ -829,9 +829,9 @@ pre code {
 .col-sm-7,
 .col-sm-8,
 .col-sm-9,
-.col-sm-10,
-.col-sm-11,
-.col-sm-12,
+.col-sm-offset-10,
+.col-sm-offset-11,
+.col-sm-offset-12,
 .col-md-1,
 .col-md-2,
 .col-md-3,
@@ -928,7 +928,7 @@ pre code {
   .container {
     max-width: 750px;
   }
-  .col-sm-1,
+  .col-sm-offset-1,
   .col-sm-2,
   .col-sm-3,
   .col-sm-4,
@@ -937,11 +937,11 @@ pre code {
   .col-sm-7,
   .col-sm-8,
   .col-sm-9,
-  .col-sm-10,
-  .col-sm-11 {
+  .col-sm-offset-10,
+  .col-sm-offset-11 {
     float: left;
   }
-  .col-sm-1 {
+  .col-sm-offset-1 {
     width: 8.333333333333332%;
   }
   .col-sm-2 {
@@ -968,13 +968,13 @@ pre code {
   .col-sm-9 {
     width: 75%;
   }
-  .col-sm-10 {
+  .col-sm-offset-10 {
     width: 83.33333333333334%;
   }
-  .col-sm-11 {
+  .col-sm-offset-11 {
     width: 91.66666666666666%;
   }
-  .col-sm-12 {
+  .col-sm-offset-12 {
     width: 100%;
   }
   .col-sm-push-1 {
