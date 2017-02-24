@@ -177,6 +177,10 @@ namespace GreekCalendars.Controllers
             }
 
             //delta chi
+            if (deltaChi == "on" && deltaTauDelta == "on")
+            {
+                return View("DeltaChiandDeltaTauDeltaCalendar");
+            }
             if (deltaChi == "on" && lambdaChiAlpha == "on")
             {
                 return View("DeltaChiandLambdaChiAlphaCalendar");

@@ -14,8 +14,8 @@ body {
 
 #footer {
     position: fixed;
+    width: 1200px;
     bottom: 0;
-    width: 100%;
 }
 
 #center-button {
