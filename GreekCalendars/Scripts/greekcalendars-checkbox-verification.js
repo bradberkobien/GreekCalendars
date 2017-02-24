@@ -1,6 +1,22 @@
 ﻿function viewClickVerify() {
     var total = $('input:checked').length;
-    if(total > 1)
+    if (total == 0)
+    {
+        swal({
+            title: "Oops...",
+            text: "You must select an organization to view",
+            type: "error",
+            showConfirmButton: false
+        });
+        document.getElementById('form').onsubmit = function () {
+            return false;
+        };
+        setTimeout(function () {
+            location.reload();
+        }, 5000);
+
+    }
+    else if(total > 1)
     {
         swal({
             title: "Oops...",
@@ -24,7 +40,23 @@
 
 function compareClickVerify() {
     var total = $('input:checked').length;
-    if (total == 1)
+
+    if (total == 0) {
+        swal({
+            title: "Oops...",
+            text: "You must select two organizations to compare",
+            type: "error",
+            showConfirmButton: false
+        });
+        document.getElementById('form').onsubmit = function () {
+            return false;
+        };
+        setTimeout(function () {
+            location.reload();
+        }, 5000);
+
+    }
+    else if (total == 1)
     {
         swal({
             title: "Oops...",
