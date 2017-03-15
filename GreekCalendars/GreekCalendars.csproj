@@ -208,7 +208,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Content Include="Scripts\greekcalendars-checkbox-verification.js" />
-    <Content Include="Scripts\greekcalendars-sorority-fraternity-compare.js" />
     <Content Include="Views\Rush\SigmaAlphaEpsilonCalendar.cshtml" />
   </ItemGroup>
   <ItemGroup>

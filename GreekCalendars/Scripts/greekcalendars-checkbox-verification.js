@@ -71,6 +71,28 @@ function compareClickVerify() {
             location.reload();
         }, 5000);
     }
+    else if (total == 2)
+    {
+        var alphaPhi = $('#alphaPhi').is(':checked');
+        var alphaSigmaAlpha = $('#alphaSigmaAlpha').is(':checked');
+
+        if ((alphaPhi == true && alphaSigmaAlpha == false) || (alphaPhi == false && alphaSigmaAlpha == true))
+        {
+            swal({
+                title: "Oops...",
+                text: "You cannot compare fraternities and sororities at the same time",
+                type: "error",
+                showConfirmButton: false
+            });
+            document.getElementById('form').onsubmit = function () {
+                return false;
+            };
+            setTimeout(function () {
+                location.reload();
+            }, 5000);
+        }
+
+    }
     else if (total > 2) {
 
         swal({
